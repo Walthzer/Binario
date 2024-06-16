@@ -3,7 +3,8 @@
 		{{ partial "breadcrumb.html" . }}
 		{{- if or .Title .Content }}
 		<div class="page block">
-			{{ with .Title }}<h1 class="page__title">{{ . }}</h1>{{ end }}
+			<!--{{ with .Title }}<h1 class="page__title">{{ . }}</h1>{{ end }}//-->
+			{{ with .Description }}<h1 class="page__description">{{ . }}</h1>{{ end }}
 			{{ with .Content }}<div class="page__content{{ if not $.Title }} page__content--notitle{{ end }}">{{ . }}</div>{{ end }}
 		</div>
 		{{- end }}
